@@ -2,16 +2,10 @@ CREATE TABLE tag (
 	name VARCHAR(25) NOT NULL PRIMARY KEY
 );
 
-CREATE TABLE category (
-	name VARCHAR(25) NOT NULL PRIMARY KEY
-);
-
 CREATE TABLE project (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	title VARCHAR(60),
 	description TEXT,
-	category VARCHAR(25) NOT NULL,
-	CONSTRAINT FOREIGN KEY (category) REFERENCES category(name)
 );
 
 CREATE TABLE member_request (
