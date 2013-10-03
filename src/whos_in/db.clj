@@ -1,4 +1,5 @@
 (ns whos-in.db)
 
-(defn fetch-posts [count])
+(defn fetch-posts [count]
+	nil)
 
