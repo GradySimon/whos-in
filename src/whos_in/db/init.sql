@@ -1,11 +1,12 @@
 CREATE TABLE tag (
-	name VARCHAR(25) NOT NULL PRIMARY KEY
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(25) NOT NULL
 );
 
 CREATE TABLE project (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	title VARCHAR(60),
-	description TEXT,
+	description TEXT
 );
 
 CREATE TABLE member_request (
@@ -17,8 +18,8 @@ CREATE TABLE member_request (
 );
 
 CREATE TABLE project_tagged (
-	tag_name VARCHAR(25) NOT NULL,
-	CONSTRAINT FOREIGN KEY (tag_name) REFERENCES tag(name),
+	tag_id INT NOT NULL,
+	CONSTRAINT FOREIGN KEY (tag_id) REFERENCES tag(id),
 	project_id INT NOT NULL,
 	CONSTRAINT FOREIGN KEY (project_id) REFERENCES project(id)
 );
