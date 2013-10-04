@@ -6,15 +6,15 @@ VALUES
 	("Plant a garden", "I want to plant a few rows in the community garden near Hereford."),
 	("Spread awareness of the Invisible Children", "I want to work with someone to design a campaign to spread awareness and raise money for the Invisible Children in Uganda.");
 
-INSERT INTO tag (name)
+INSERT INTO tag (id, name)
 VALUES
-	("Programming"),
-	("Woodworking"),
-	("Activisim"),
-	("Music"),
-	("Outdoors"),
-	("Gardening"),
-	("Drinking");
+	(1, "Programming"),
+	(2, "Woodworking"),
+	(3, "Activisim"),
+	(4, "Music"),
+	(5, "Outdoors"),
+	(6, "Gardening"),
+	(7, "Drinking");
 
 INSERT INTO project_tagged (tag_id, project_id)
 VALUES
@@ -27,4 +27,3 @@ VALUES
 	(5, 4),
 	(6, 4),
 	(7, 2);
-
