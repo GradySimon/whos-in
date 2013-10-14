@@ -1,3 +1,5 @@
+-- This was written with MySQL in mind, no other RDBMS.
+
 CREATE TABLE tag (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	name VARCHAR(25) NOT NULL
