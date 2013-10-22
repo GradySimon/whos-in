@@ -1,3 +1,9 @@
 (ns whos-in.config)
 
-(def MAX-POSTS-ON-INDEX 20)
+(def MAX-PROJECTS-ON-INDEX 20)
+
+(def DB-LOCATION "")
+
+(def DB-USER "")
+
+(def DB-PASSWORD "")

@@ -4,5 +4,5 @@
 			  [whos-in.render :as render-index]))
 
 (defn index "Main index page." []
-	(let [posts (db/fetch-posts config/MAX-POSTS-ON-INDEX)]
+	(let [posts (db/fetch-projects config/MAX-PROJECTS-ON-INDEX)]
 		(render/render-index posts)))

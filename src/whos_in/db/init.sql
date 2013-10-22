@@ -8,7 +8,8 @@ CREATE TABLE tag (
 CREATE TABLE project (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	title VARCHAR(60),
-	description TEXT
+	description TEXT,
+	creation_date DATETIME NOT NULL
 );
 
 CREATE TABLE member_request (
