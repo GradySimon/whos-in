@@ -12,3 +12,6 @@
 				(for [post posts]
 					[:div.project
 						])]]))
+
+(defn render-project-page [project-map]
+	nil)

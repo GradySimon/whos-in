@@ -5,7 +5,7 @@
     		  :url "http://opensource.org/licenses/MIT"}
   	:dependencies [[org.clojure/clojure "1.5.1"]
   				   [compojure "1.1.5"]
-  				   [org.clojure/java.jdbc "0.3.0-alpha5"]
+  				   [org.clojure/java.jdbc "0.3.0-beta1"]
   				   [mysql/mysql-connector-java "5.1.25"]
   				   [hiccup "1.0.4"]]
   	:plugins [[lein-ring "0.8.7"]]

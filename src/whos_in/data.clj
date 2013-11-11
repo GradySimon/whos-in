@@ -9,7 +9,7 @@
 	     :password config/DB-PASSWORD})
 
 (defn get-result-set [query-and-params]
-	(jdbc/query query-and-params))
+	(jdbc/query db query-and-params))
 
 (defn fetch-projects [max_project_count]
 	(get-result-set
@@ -17,17 +17,6 @@
 		  FROM project
 		  ORDER BY creation_date DESC
 		  LIMIT ?" max_project_count]))
-
-(defn fetch-project [project-id]
-	(let [project ()
-		  tags (get-result-set
-		  			["SELECT"])]))
-
-(defn fetch-project-core [project-id]
-	(get-result-set
-		["SELECT title, description, creation_date
-		  FROM project
-		  WHERE id = ?" project-id]))
 
 (defn fetch-project-tags [project-id]
 	(get-result-set
@@ -43,3 +32,16 @@
 		  FROM project
 		  INNER JOIN member_request ON project.id = member_request.project_id
 		  WHERE project.id = ?" project-id])) ; needs to be updated when user table is added and linked
+
+(defn fetch-project-core [project-id]
+	(get-result-set
+		["SELECT title, description, creation_date
+		  FROM project
+		  WHERE id = ?" project-id]))
+
+(defn fetch-project [project-id]
+	(let [project-core (fetch-project-core)
+		  tags (fetch-project-tags)
+		  member-requests (fetch-project-member-requests)]
+		  {:project-core project-core, :tags tags, :member-requests member-requests}))
+

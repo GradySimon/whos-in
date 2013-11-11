@@ -7,3 +7,6 @@ pom.xml.asc
 *.class
 /.lein-*
 /.nrepl-port
+
+# Ignore local config file (which will contain sensitive DB credentials)
+src/whos_in/config.clj
